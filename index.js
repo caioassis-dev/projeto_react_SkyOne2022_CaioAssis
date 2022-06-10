@@ -7,15 +7,15 @@ class Square extends React.Component {
     return (
       <button
         className="square"
-        onclick={function () {
-          alert('Olha só, você clicou')
-        }}
+        onClick={() => alert('Um clique feito com uma Arrow Function, que sensa!')
+        }
       >
         {this.props.value}
       </button>
     )
   }
 }
+
 
 class Board extends React.Component {
   renderSquare(i) {
