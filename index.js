@@ -4,26 +4,23 @@ import './index.css'
 
 class Square extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      value: null,
-    };
+      squares: Array(9).fill(null)
+    }
   }
   render() {
     return (
-      <button
-        className="square"
-        onClick={() => this.setState({value:'X'})}
-      >
+      <button className="square" onClick={() => this.setState({ value: 'X' })}>
         {this.state.value}
       </button>
-    );
+    )
   }
 }
 
 class Board extends React.Component {
   renderSquare(i) {
-    return <Square value={i} />
+    return <Square value={this.state.squares[1]} />
   }
   render() {
     const status = 'Next player: X'
@@ -46,7 +43,7 @@ class Board extends React.Component {
           {this.renderSquare(8)}
         </div>
       </div>
-    );
+    )
   }
 }
 
@@ -62,7 +59,7 @@ class Game extends React.Component {
           <ol>{/* TODO */}</ol>
         </div>
       </div>
-    );
+    )
   }
 }
 
