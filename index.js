@@ -12,19 +12,29 @@ class Square extends React.Component {
   }
 }
 
-<Square value={this.state.squares[i]} onclick={() => this.handleclick(i)} />
-
 class Board extends React.Component {
-  constructor(props) {    
-    super(props);    
-    this.state = {      
-      squares: Array(9).fill(null),    
-    };  
+  constructor(props) {
+    super(props)
+    this.state = {
+      squares: Array(9).fill(null)
+    }
+  }
+
+  handleclick(i) {
+    const squares = this.state.squares.slice()
+    squares[1] = 'x'
+    this.setState({ squares: squares })
   }
 
   renderSquare(i) {
-    return <Square value={this.state.squares[1]} />
+    return (
+      <Square
+        value={this.state.squares[i]}
+        onClick={() => this.handleClick(i)}
+      />
+    )
   }
+  
   render() {
     const status = 'Next player: X'
     return (
