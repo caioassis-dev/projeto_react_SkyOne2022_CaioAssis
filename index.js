@@ -137,6 +137,7 @@ function calculateWinner(squares) {
   return null
 }
 
-// ================================
+// ========Sky.One 2022 - Game Jogo da Velha Criado por CaioAssis==============
 
 ReactDOM.render(<Game />, document.getElementById('root'))
+
