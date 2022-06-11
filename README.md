@@ -1,4 +1,4 @@
-# Projeto_react_SkyOne2022_CaioAssis
+# Projeto React SkyOne2022 - CaioAssis
 
 ### Desafio React JS - Jogo da Velha
 
